@@ -1,0 +1,15 @@
+# Terminal dependencies specifically for IaC Agent
+# Install with: pip install -r requirements-terminal.txt
+
+# Windows-specific terminal support
+pywinpty>=2.0.0; sys_platform == "win32"
+winpty>=2.0.1; sys_platform == "win32"
+
+# Cross-platform PTY support  
+ptyprocess>=0.7.0
+pexpect>=4.9.0; sys_platform != "win32"
+
+# Core web framework (if not already installed)
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+websockets>=12.0
